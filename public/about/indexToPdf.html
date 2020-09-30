@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHSCHOOLS | ADMISSION FORM</title>
+    <link rel="stylesheet" href="../icofont.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="../global.js"></script>
+    <script src="form.js"></script>
+</head>
+<body>
+    <style>
+        header{
+            margin: 0;
+        }
+
+        #application-form table{
+            margin: 2rem 0 0 !important;
+        }
+
+        table td{
+            height: 4rem;
+            width: 25vw;
+        }
+        
+        footer{
+            background-color: black;
+        }
+    </style>
+
+    <header class="cols">
+        <div class="rows gallery">
+            <a href="/" class="imglink"><img class="logo" src="/trio.png" alt="Website Logo"></a>
+            <div class="cols headcontent" style="min-width: 55%">
+                <h1><a href="/"><span class="red">GH</span> <span class="green">SCHOOLS</span></a></h1>
+                <h2>Online Application Form</h1>
+                <hr width="100%">
+                <i class="motto">Train, Practice and Acheive</i>
+
+                <nav class="rows navlinks">
+                    <a href="/departments#ghmediacourses">GH MEDIA SCHOOL</a>
+                    <a href="/departments#ghcosmetologycourses">GH COSMETOLOGY SCHOOL</a>
+                    <a href="/departments#ghfashioncourses">GH FASHION SCHOOL</a>
+                </nav>
+            </div>
+        </div>
+        <span class="lg-100" style="height: 1px; text-align: center; background-color: green; color: rgb(255, 255, 89);"></span>
+    </header>
+
+    <main class="cols">
+        <form id="application-form" action="/api/formhandleroute" method="POST" class="rows">
+
+            <div class="cols lg-100 form-content">
+                <h3>PERSONAL DETAILS OF APPLICANT</h3>
+                <div class="rows form-line">
+                    <div class="cols lg-30">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" required>
+                    </div>
+
+                    <div class="cols lg-30">
+                        <label for="middle-name">Middle Name</label>
+                        <input type="text" name="middle-name" id="middle-name">
+                    </div>
+
+                    <div class="cols lg-30">
+                        <label for="surname">Last Name (Surname)</label>
+                        <input type="text" name="surname" id="surname" required>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="cols lg-65">
+                        <label for="address">Address/Residential:</label>
+                        <input type="text" name="address" id="address" required>
+                    </div>
+
+                    <div class="cols lg-25">
+                        <label for="sex">Sex:</label>
+                        <input type="text" name="sex" id="sex" maxlength=10 required>
+                    </div>
+                </div>
+                
+                <div class="rows form-line">
+                    <div class="cols lg-50">
+                        <label for="dob">Date Of Birth:</label>
+                        <input type="text" name="dob" id="dob" required>
+                    </div>
+
+                    <div class="cols lg-40">
+                        <label for="nationality">Nationality:</label>
+                        <input type="text" name="nationality" id="nationality" maxlength=100 required>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="cols lg-40">
+                        <label for="phone">Telephone/Cell:</label>
+                        <input type="tel" name="phone" id="phone" required>
+                    </div>
+
+                    <div class="cols lg-50">
+                        <label for="user-email">Email</label>
+                        <input type="email" name="user-email" id="user-email" required>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="cols lg-40">
+                        <label for="nid-type">National ID Type:</label>
+                        <input type="text" name="nid-type" id="nid-type" maxlength=100>
+                    </div>
+
+                    <div class="cols lg-50">
+                        <label for="nid-no">National ID No.</label>
+                        <input type="text" name="nid-no" id="nid-no" maxlength=100 >
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="cols lg-40">
+                        <label for="present-job">Present Job</label>
+                        <input type="text" name="present-job" id="present-job" maxlength=100 >
+                    </div>
+
+                    <div class="cols lg-50">
+                        <label for="language">Language Spoken</label>
+                        <input type="text" name="language" id="language" maxlength=100>
+                    </div>
+                </div>
+
+                <!-- table -->
+                <div class="rows form-line" style="margin-top: 2rem; max-width: 100%; overflow: auto;">
+                    <table border="1" style="border-spacing: unset">
+                        <thead>
+                            <th>SCHOOLS ATTENDED</th>
+                            <th>LOCATION</th>
+                            <th>YEAR</th>
+                            <th>QUALIFICATION</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <!-- table -->
+
+                <h3>COURSE INFORMATION</h3>
+                <!-- MEDIA SCHOOL -->
+                <h3 class="bg-red">KINDLY TICK YOUR PREFERENCE (for Media School Applicants <strong>only</strong>)</h3>
+
+                <fieldset>
+                    <legend>SELECT YOUR PREFERRED COURSE</legend>
+                    <div class="rows form-line">
+                        <label for="pref-jms-course">JOURNALISM AND MEDIA STUDIES</label>
+                        <!-- <input type="radio" name="pref-media-course" id="pref-jms-course" value="JOURNALISM AND MEDIA STUDIES" data-media data-degree="data-media"> -->
+                    </div>
+
+                    <div class="rows form-line">
+                        <label for="pref-jma-course">JOURNALISM AND MEDIA ARTS</label>
+                        <!-- <input type="radio" name="pref-media-course" id="pref-jma-course" value="JOURNALISM AND MEDIA ARTS" data-media data-degree="data-media"> -->
+                    </div>
+
+                    <div class="rows form-line">
+                        <label for="pref-tfp-course">TV AND FILM PRODUCTION</label>
+                        <!-- <input type="radio" name="pref-media-course" id="pref-tfp-course" value="TV AND FILM PRODUCTION" data-media data-degree="data-media"> -->
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>SELECT DURATION OF COURSE</legend>
+                    <div class="rows form-line">
+                        <label for="media-diploma">DIPLOMA (2 YEARS) </label>
+                        <!-- <input type="radio" name="media-degree-type" id="media-diploma" value="diploma" data-media data-degree="data-media"> -->
+                    </div>
+    
+                    <div class="rows form-line">
+                        <label for="media-certificate">CERTIFICATE (1 YEAR) </label>
+                        <!-- <input type="radio" name="media-degree-type" id="media-certificate" value="certificate" data-media data-degree="data-media"> -->
+                    </div>
+                </fieldset>
+
+                <!-- COSMETOLOGY SCHOOL -->
+                <h3 class="bg-orange">KINDLY TICK YOUR PREFERENCE (for Cosmetology School Applicants <strong>only</strong>)</h3>
+                <div class="rows form-line">
+                    <label for="cosmetology-diploma">DIPLOMA IN COSMETOLOGY (GES) (2 YEARS) </label>
+                    <!-- <input type="radio" name="cosmetology-degree-type" id="cosmetology-diploma" value="diploma" data-cosmet data-degree="data-cosmet"> -->
+                </div>
+
+                <div class="rows form-line">
+                    <label for="cosmetology-cert-1">CERTIFICATE IN COSMETOLOGY (2 YEARS) </label>
+                    <!-- <input type="radio" name="cosmetology-degree-type" id="cosmetology-cert-1" value="Cosmetology Certificate" data-cosmet data-degree="data-cosmet"> -->
+                </div>
+
+                <div class="rows form-line">
+                    <label for="cosmetology-cert-2">CERTIFICATE IN BEAUTY THERAPY (1&frac12; YEAR) </label>
+                    <!-- <input type="radio" name="cosmetology-degree-type" id="cosmetology-cert-2" value="Beauty Therapy Certificate" data-cosmet data-degree="data-cosmet"> -->
+                </div>
+
+                <div class="rows form-line">
+                    <label for="cosmetology-cert-3">CERTIFICATE IN BEAUTY SPECIALIST (1 YEAR) </label>
+                    <!-- <input type="radio" name="cosmetology-degree-type" id="cosmetology-cert-3" value="Beauty Specialist Certificate" data-cosmet data-degree="data-cosmet"> -->
+                </div>
+
+                <fieldset>
+                    <legend>SESSIONS</legend>
+                    <div class="rows form-line">
+                        <label for="sessions-morning">MORNING 8-12 </label>
+                        <!-- <input type="radio" name="pref-cosmet-sessions" id="sessions-morning" value="morning" data-cosmet> -->
+                    </div>
+    
+                    <div class="rows form-line">
+                        <label for="sessions-afternoon">AFTERNOON 12-4 </label>
+                        <!-- <input type="radio" name="pref-cosmet-sessions" id="sessions-afternoon" value="afternoon" data-cosmet> -->
+                    </div>
+                </fieldset>
+
+                <!-- FASHION SCHOOL -->
+                <h3 class="bg-blue">KINDLY TICK YOUR PREFERENCE (for Fashion School Applicants <strong>only</strong>)</h3>
+                <div class="rows form-line">
+                    <label for="fashion-diploma">DIPLOMA IN FASHION DESIGN & TECHNOLOGY (GES) 2 YEARS </label>
+                    <!-- <input type="radio" name="fashion-degree-type" id="fashion-diploma" value="diploma" data-fashion data-degree="data-fashion"> -->
+                </div>
+
+                <div class="rows form-line">
+                    <label for="fashion-certificate">CERTIFICATE IN FASHION DESIGN & TECHNOLOGY (GES) 1 YEAR </label>
+                    <!-- <input type="radio" name="fashion-degree-type" id="fashion-certificate" value="certificate" data-fashion data-degree="data-fashion"> -->
+                </div>
+
+                <fieldset>
+                    <legend>SESSIONS</legend>
+                    <div class="rows form-line">
+                        <label for="sessions-morning">MORNING 8-12 </label>
+                        <!-- <input type="radio" name="pref-fashion-sessions" id="sessions-morning" value="morning" data-fashion> -->
+                    </div>
+    
+                    <div class="rows form-line">
+                        <label for="sessions-afternoon">AFTERNOON 1-5 </label>
+                        <!-- <input type="radio" name="pref-fashion-sessions" id="sessions-afternoon" value="afternoon" data-fashion> -->
+                    </div>
+                </fieldset>
+
+                <h3>HOSTEL INFO</h3>
+                <div class="rows form-line">
+                    <span>Hostel Preference:</span>
+                    <div class="rows">
+                        <!-- <input type="radio" name="hostel-pref" id="hostel-pref-yes" value="Yes"> -->
+                        <label for="hostel-pref-yes">YES</label>
+                    </div>
+                    <div class="rows">
+                        <!-- <input type="radio" name="hostel-pref" id="hostel-pref-no" value="No" checked> -->
+                        <label for="hostel-pref-no">NO</label>
+                    </div>
+                </div>
+
+                <h3>MEDICAL INFORMATION</h3>
+                <div class="rows form-line">
+                    <span>Any medical conditions:</span>
+                    <div class="rows">
+                        <!-- <input type="radio" name="med-condition" id="med-condition-yes" value="Yes"> -->
+                        <label for="med-condition-yes">YES</label>
+                    </div>
+                    <div class="rows">
+                        <!-- <input type="radio" name="med-condition" id="med-condition-no" value="No" checked> -->
+                        <label for="med-condition-no">NO</label>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows" style="align-items: center;">
+                        <label for="specific-med-condition">If Yes Please Specify:</label>
+                        <input type="text" name="specific-med-condition" id="specific-med-condition" >
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows" style="align-items: center;">
+                        <label for="disability">Special Disability:</label>
+                        <input type="text" name="disability" id="disability">
+                    </div>
+                </div>
+
+                <h3>OTHER IMPORTANT INFORMATION</h3>
+                <div class="rows form-line">
+                    <div class="rows" style="align-items: center;">
+                        <label for="referral-source">Where did you first hear about us?</label>
+                        <input type="text" name="referral-source" id="referral-source">
+                    </div>
+                </div>
+
+                <!-- For fashion applicants -->
+                <div class="rows form-line">
+                    <span>Are you already into your field of application? ( Media /Fashion / Cosmetology): </span>
+                    <div class="rows">
+                        <!-- <input type="radio" name="prior-exp" id="prior-exp-yes" value="Yes"> -->
+                        <label for="prior-exp-yes">YES</label>
+                    </div>
+                    <div class="rows">
+                        <label for="prior-exp-no">NO</label>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows" style="align-items: center;">
+                        <label for="prior-specialization">If yes, please kindly state your area(s) of specialization: </label>
+                        <input type="text" name="prior-specialization" id="prior-specialization">
+                    </div>
+                </div>
+
+                <!-- <div class="rows form-line">
+                    <div class="cols">
+                        <label for="">If someone is sponsoring your course please give the name & Contact of the person.</label>
+                        <input type="text" name="" id="" placeholder="Enter name and contact here">
+                    </div>
+                </div> -->
+
+                <h3>PARENT OR GUARDIAN INFORMATION</h3>
+                <div class="rows form-line">
+                    <div class="rows lg-90" style="align-items: center;">
+                        <label for="name-of-sponsor" class="lg-30">Name Of Sponsor:</label>
+                        <input type="text" name="name-of-sponsor" id="name-of-sponsor" class="lg-70" required>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows lg-90" style="align-items: center;">
+                        <label for="rel-with-sponsor" class="lg-30">Relationship With Sponsor:</label>
+                        <input type="text" name="rel-with-sponsor" id="rel-with-sponsor" class="lg-70" required>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows lg-90" style="align-items: center;">
+                        <label for="occupation-of-sponsor" class="lg-30">Occupation of Sponsor: </label>
+                        <input type="text" name="occupation-of-sponsor" id="occupation-of-sponsor" class="lg-70">
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows lg-90" style="align-items: center;">
+                        <label for="address-of-sponsor" class="lg-30">Address / Residential: </label>
+                        <input type="text" name="address-of-sponsor" id="address-of-sponsor" class="lg-70" required>
+                    </div>
+                </div>
+
+                <div class="rows form-line">
+                    <div class="rows lg-90" style="align-items: center;">
+                        <label for="sponsor-contact" class="lg-30">Phone number Of Sponsor:</label>
+                        <input type="tel" name="sponsor-contact" id="sponsor-contact" class="lg-70" required>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 0;">PAYMENT VALIDATION</h3>
+                <span class="lg-100" style="margin-bottom: 0.5rem; padding: 2px 1rem; background-color: green; color: #ffffff;">
+                    NOTICE: if your payment was successful, you would have received your payment reference in your email. Copy and paste
+                    the reference here.
+                </span>
+
+                <div class="rows form-line">
+                    <div class="lg-60 payref cols">
+                        <label for="reference">Payment Reference:</label>
+                        <input type="text" name="reference" id="reference" required>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 0;">DECLARATION BY APPLICANT</h3>
+                <div class="rows form-line">
+                    <div class="lg-90 rows" style="align-items: center;">
+                        <input type="checkbox" name="declaration" id="declaration" required style="margin-right: 2rem">
+                        <label for="declaration"><i>I affirm that all information provided are true and valid. I therefore take responsibility
+                            for any wrong information provided. I, for this reason, tick this checkbox in approval of my claim.</i>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- <input type="submit" class="strip-btn btn" value="SUBMIT APPLICATION"> -->
+            </div> 
+        </form>
+    </main>
+
+    <footer class="cols">
+
+    </footer>
+</body>
+</html>

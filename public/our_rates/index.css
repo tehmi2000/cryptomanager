@@ -1,0 +1,186 @@
+header{
+    margin: 0;
+}
+
+main{
+    margin: 0;
+}
+
+aside.table-of-content{
+    min-width: 24%;
+    background-color: rgb(10, 10, 10);
+    transition: all 0.3s ease;
+}
+
+aside.table-of-content #menu-action{
+    display: none;
+}
+
+aside.table-of-content #menu-action:hover{
+    background-color: dodgerblue !important;
+}
+
+aside.table-of-content > *{
+    padding: 1rem;
+}
+
+aside.table-of-content .toc-head{
+    justify-content: space-between;
+}
+
+aside.table-of-content .toc-head *{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0;
+}
+
+aside.table-of-content .toc-body{
+    margin: 2rem 0;
+    width: 100%;
+    list-style-type: none;
+    /* border: 1px solid; */
+    padding: 0;
+}
+
+aside.table-of-content .toc-foot a:link, aside.table-of-content .toc-foot a:visited{
+    text-transform: uppercase;
+    color: dodgerblue;
+}
+
+aside.table-of-content li.toc-body-child:first-child{
+    border-top: 1px solid #313131;
+}
+
+aside.table-of-content li.toc-body-child{
+    margin: 0;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #313131;
+    transition: font-size 0.3s ease;
+}
+
+aside.table-of-content li.toc-body-child:hover{
+    cursor: pointer;
+    background-color: dodgerblue;
+    font-size: 1.1rem;
+}
+
+aside.table-of-content li.toc-body-child button, aside.table-of-content .toc-head button{
+    outline: none;
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+
+.page-content{
+    padding: 0 1rem;
+}
+
+.page-content .container-pane{
+    margin-bottom: 1rem;
+}
+
+.page-content .container-pane h3{
+    padding: 1rem;
+}
+
+.page-content .course-pane-wrapper{
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.page-content .course-pane-wrapper .course-pane{
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #ccc;
+    padding: 2rem;
+    background: white;
+    color: black;
+    margin: 0.5rem;
+}
+
+.course-pane-wrapper .course-pane b{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.course-pane-wrapper .course-pane li{
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+}
+
+hr{
+    border: 1px solid red
+}
+
+@media only screen and (max-width:800px){
+    aside.table-of-content #menu-action{
+        display: block;
+        font-size: medium;
+    }
+
+    aside.table-of-content{
+        margin-left: -100vw;
+        width: 100%;
+        position: fixed;
+    }
+
+    aside.table-of-content.opened{
+        margin-left: 0;
+    }
+
+    aside.table-of-content #menu-action.closed{
+        padding: 1.5rem;
+        margin-right: -8rem;
+        background-color: black;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
+    }
+
+    aside.table-of-content #menu-action.opened{
+        margin-right: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .page-content{
+        padding: 0;
+    }
+
+    .navlinks{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .page-section{
+        width: 85%;
+    }
+
+    .page-section-head{
+        top: 0;
+        position: sticky;
+        padding: 1rem 3rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        border-radius: 0;
+        z-index: +999;
+    }
+
+    .page-section-head h2{
+        font-size: 1.6rem;
+        color: #d80d0d;
+    }
+
+    .page-section h2{
+        font-size: 1.8rem !important;
+    }
+
+    .page-content .course-pane-wrapper .course-pane{
+        width: 90%;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

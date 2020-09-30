@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>eXchange</title>
+    <link rel="stylesheet" href="/icofont.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/index.css">
+    <script src="/assets/lib/greensock/minified/gsap.min.js"></script>
+    <script src="/global.js"></script>
+    <script src="/index.js"></script>
+</head>
+<body>
+    <header class="cols">
+        <div class="rows gallery">
+            <!-- <a href="/" class="imglink"><img class="logo" src="/trio.png" alt="Website Logo"></a> -->
+            
+            <div class="cols headcontent">
+                <!-- <h1>eXchange</h1> -->
+                <a href="/" class="imglink"><img class="logo" src="/assets/images/ExchangeLogo.png" alt="Website Logo"></a>
+                <span class="rows" style="color: #888;">We take care of your cryptocurrency trade and expenses</span>
+            </div>
+            <div class="cols headcontent">
+                <h1 id="date-head">Today is September 24, 2012</h1>
+                <span class="rows" style="color: #888;">
+                    <span class="prices">Bitcoin price: </span>
+                    <span class="prices">Ethereum price: </span>
+                    <span class="prices">Tron price: </span>
+                </span>
+            </div>
+
+        </div>
+        <nav class="rows hanglinks">
+            <a href="/" class="active">HOME</a>
+            <a href="/our_rates">EXCHANGE RATES</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/support_and_faqs">SUPPORT & FAQs</a>
+        </nav>
+    </header>
+    <noscript>You need javascript enabled to be able to view this page</noscript>
+    <main class="rows">
+        <div id="item-pane" class="item-pane rows">
+            <!-- <div id="ujsajsknlkasnsalLNKK12" class="cols page-section">
+                <div class="head rows">
+                    <div class="lg-20 cols date">
+                        <div id="initial-transaction-month">Sep</div>
+                        <h2 id="initial-transaction-date">5</h2>
+                    </div>
+                    <div class="lg-80">
+                        <div id="transaction-id">Transaction ID: ujsajsknlkasnsalLNKK12</div>
+                        <h2 id="transaction-capital">NGN 1,000,000.00</h2>
+                        <div class="pivot-price">1 ETH costs NGN 165,000.00</div>
+                    </div>
+                </div>
+
+                <div class="cols content">
+                    <div class="rows item null">No transaction record</div>
+                    <div class="item">
+                        <div id="transaction-date">28th of July, 2015</div>
+                        <div id="current-pivot-price">1 ETH costs NGN 165,000.00</div>
+                        <div id="capital-invested" class="capital-invested">Capital: NGN 165,000.00</div>
+                        <div><strong id="current-eev">ECV: NGN 12,343.00</strong> <strong>//</strong> <strong id="current-rpi">RPI: NGN 10,013.00</strong></div>
+                    </div>
+                    <div class="item expense">
+                        <div id="transaction-date">28th of July, 2015</div>
+                        <div id="current-pivot-price">1 ETH costs NGN 165,000.00</div>
+                        <div id="capital-invested" class="capital-invested">Capital: NGN 165,000.00</div>
+                        <div><strong id="current-eev">ECV: NGN 12,343.00</strong> <strong>//</strong> <strong id="current-rpi">RPI: NGN 10,013.00</strong></div>
+                    </div>
+                </div>
+
+                <div class="rows profit-foot">
+                    <h2>NET PROFIT: NGN 1,234.56 | NET PROPOSED PROFIT: NGN 2,345.67</h2>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="cols lg-30">
+            <form id="deletor" class="cols lg-100">
+                <div class="rows lg-90" style="align-items: center;">
+                    <h2 style="color: black">Delete Transaction</h2>
+                    <span id="minimize-delete_deletor" class="rows icofont-caret-down toggle-minimize"></span>
+                </div>
+                
+                <div class="form-content hidden cols lg-90">
+                    <div class="cols lg-100">
+                        <label for="transactionDeleteInput">Transaction ID:</label>
+                        <input id="transactionDeleteInput" class="input-style lg-90" placeholder="Paste ID of transaction to be deleted here">
+                    </div>
+    
+                    <fieldset class="lg-100" style="border: none; border-top: 1px solid #ccc; text-align: center; margin-top: 1.5rem">
+                        <legend style="color: #888; font-style: italic">Field below is optional</legend>
+                    </fieldset>
+    
+                    <div class="cols lg-100">
+                        <label for="subtransactionInput">Serial Number:</label>
+                        <input type="number" id="subtransactionInput" min="1" class="input-style lg-90" placeholder="Enter subtransaction number here">
+                    </div>
+    
+                    <div class="rows lg-100">
+                        <input type="checkbox" id="isSubtransaction">
+                        <label for="isSubtransaction">Delete subtransaction?</label>
+                    </div>
+    
+                    <input type="submit" id="transactionDeleteButton" class="options-button activated lg-90" value="Delete">
+                </div>
+                
+            </form>
+
+            <form id="editor" class="cols lg-100">
+                <div class="rows lg-90" style="align-items: center;">
+                    <h2 style="color: black">Create/Update Transaction</h2>
+                    <span id="minimize-update_editor" class="rows icofont-caret-down toggle-minimize"></span>
+                </div>
+
+                <div class="form-content hidden cols lg-90">
+                    <div class="rows lg-100" style="justify-content: space-between">
+                        <div class="cols lg-55">
+                            <label for="transIDInput">Transaction ID:</label>
+                            <input type="text" id="transIDInput" class="input-style" placeholder="Enter the transaction ID here">
+                            <p class="brief-text"></p>
+                        </div>
+                        
+                        <div class="cols lg-35">
+                            <label for="serialNumberInput">Serial Number:</label>
+                            <input type="number" id="serialNumberInput" min="1" value="1" class="input-style">
+                        </div>
+                    </div>
+
+                    <!-- <div class="rows lg-100" style="margin-top: -1rem; margin-bottom: 1rem;">
+                        <input type="checkbox" id="isExpense">
+                        <label for="isExpense">Is expense transaction?</label>
+                    </div> -->
+        
+                    <fieldset class="lg-100" style="border: none; border-top: 1px solid #ccc; text-align: center;">
+                        <legend style="color: #888; font-style: italic">Fields below are compulsory</legend>
+                    </fieldset>
+        
+                    <div class="rows lg-100" style="justify-content: space-between">
+                        <div class="cols lg-55" >
+                            <label for="pivotPriceInput">Price per Crypto:</label>
+                            <input type="text" id="pivotPriceInput" min="0" class="input-style" required>
+                        </div>
+        
+                        <div class="cols lg-35">
+                            <label for="totalCryptoInput">Total Crypto:</label>
+                            <input type="text" id="totalCryptoInput" min="0" class="input-style" required>
+                        </div>
+                    </div>
+        
+                    <div class="rows lg-100" style="justify-content: space-between">
+                        <div class="cols lg-45" >
+                            <label for="dateInput">Date:</label>
+                            <input type="date" id="dateInput" class="input-style">
+                        </div>
+        
+                        <div class="cols lg-45" >
+                            <label for="cryptoTypeInput">Cryptocurrency Type:</label>
+                            <select id="cryptoTypeInput" class="lg-100 input-style" required>
+                                <option value="ETH">ETH</option>
+                                <option value="TRX">TRX</option>
+                                <option value="BTC">BTC</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="cols lg-100" >
+                        <label for="RPIInput">Return + Investment(RPI):</label>
+                        <input type="text" id="RPIInput" class="input-style" required>
+                    </div>
+        
+                    <div class="cols lg-100" >
+                        <label for="capitalInput">Capital Invested:</label>
+                        <input type="text" id="capitalInput" class="input-style" required>
+                    </div>
+
+                    <input type="submit" id="actionButton" class="options-button lg-90" value="Submit">
+                </div>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer class="cols">
+        <div class="bottom cols">
+            <a href="/" class="footer-logo"><img class="footer-logo" src="/assets/images/ExchangeLogo.png" alt="Website Logo"></a>
+            <span>eXchange 2020. All rights reserved</span>
+            <span class="rows" style="align-items: center;">Powered by<a href="https://learnira.org">DeePLUG&trade;</a></span>
+        </div>
+    </footer>
+</body>
+</html>

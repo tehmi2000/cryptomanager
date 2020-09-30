@@ -1,0 +1,136 @@
+header{
+    margin: 0;
+}
+
+main{
+    margin: 0;
+}
+
+.page-content{
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.page-content .container-pane{
+    margin-bottom: 1rem;
+}
+
+.page-content .container-pane h3{
+    font-size: 1.45rem;
+    padding: 1rem;
+}
+
+.page-content .fees-pane-wrapper{
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.page-content .fees-pane-wrapper .fees-pane{
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #ccc;
+    padding: 2rem;
+    background: white;
+    color: black;
+    margin: 0.5rem auto;
+}
+
+.fees-pane-wrapper .fees-pane .content{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.fees-pane-wrapper .fees-pane b{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    /* color: rgb(0, 91, 182); */
+}
+
+.fees-pane-wrapper .fees-pane li{
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+}
+
+.fees-pane table{
+    font-size: 1.3rem;
+}
+
+.fees-pane table tr{
+    text-align: left;
+    transition: all 0.1s ease;
+}
+
+.fees-pane table td:first-child, .fees-pane table th:first-child{
+    text-align: center;
+}
+
+.fees-pane table tr:hover{
+    color: white;
+}
+
+#fashion .fees-pane table tr:hover{
+    background-color: green;
+}
+
+#cosmet .fees-pane table tr:hover{
+    background-color: rgb(182, 0, 173);
+}
+
+#media .fees-pane table tr:hover{
+    background-color: rgb(0, 151, 113);
+}
+
+.fees-pane table th, .fees-pane table td:nth-child(2){
+    text-transform: uppercase;
+}
+
+.proceedbtn{
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    margin: 3rem auto;
+    background-color: orangered;
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 3px #afafaf;
+}
+
+
+@media only screen and (max-width:800px){
+    .page-content{
+        padding: 0;
+    }
+
+    .navlinks{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .fees-pane-wrapper .fees-pane b{
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        /* text-decoration: underline; */
+    }
+
+    .page-content .fees-pane-wrapper .fees-pane{
+        width: 95%;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fees-pane table{
+        font-size: 1.15rem;
+    }
+    
+    .fees-pane table tr{
+        text-align: left;
+    }
+}

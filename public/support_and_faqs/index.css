@@ -1,0 +1,102 @@
+header{
+    margin: 0;
+}
+
+main{
+    margin: 0;
+}
+
+main .notice{
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.page-content{
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.page-content .container-pane{
+    margin-bottom: 1rem;
+}
+
+.page-content .container-pane h3{
+    padding: 1rem;
+}
+
+.page-content .rules-pane-wrapper{
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.page-content .rules-pane-wrapper .rules-pane{
+    width: calc(50% - 1rem);
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px rgb(212, 212, 212);
+    padding: 2rem;
+    background: white;
+    color: black;
+    margin: 0.5rem;
+}
+
+.rules-pane-wrapper .rules-pane .content{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.rules-pane-wrapper .rules-pane b{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    /* color: rgb(0, 91, 182); */
+}
+
+.rules-pane-wrapper .rules-pane li{
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+}
+
+hr{
+    border: 1px solid red
+}
+
+.proceedbtn{
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    margin: 3rem auto;
+    background-color: #d80d0d;
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 3px #afafaf;
+}
+
+#skipbtn.proceedbtn{
+    width: auto;
+    border-radius: 5px;
+    position: fixed;
+    right: 5%;
+    bottom: 2.8vh;
+}
+
+
+@media only screen and (max-width:800px){
+    .proceedbtn{
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .navlinks{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .page-content .rules-pane-wrapper .rules-pane{
+        width: 100%;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHSCHOOLS | Thank you for applying!</title>
+    <link rel="stylesheet" href="../icofont.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="../global.js"></script>
+</head>
+<body>
+    <style>
+        .responsebtn{
+            display: inline-block;
+            border: none;
+            background-color: dodgerblue;
+            color: white;
+            width: 55%;
+            margin: 0.5rem auto;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center
+        }
+    </style>
+    <header class="cols">
+        <div class="rows gallery">
+            <a href="/" class="imglink"><img class="logo" src="/trio.png" alt="Website Logo"></a>
+            <div class="cols headcontent" style="min-width: 55%">
+                <h1><a href="/"><span class="red">GH</span> <span class="green">SCHOOLS</span></a></h1>
+                <h2>Online Application Form</h1>
+                <hr width="100%">
+                <i class="motto">Train, Practice and Acheive</i>
+
+                <nav class="rows navlinks">
+                    <a href="/departments#ghmediacourses">GH MEDIA SCHOOL</a>
+                    <a href="/departments#ghcosmetologycourses">GH COSMETOLOGY SCHOOL</a>
+                    <a href="/departments#ghfashioncourses">GH FASHION SCHOOL</a>
+                </nav>
+            </div>
+        </div>
+        <span class="lg-100" style="height: 1px; text-align: center; background-color: green; color: rgb(255, 255, 89);"></span>
+        <nav class="rows hanglinks">
+            <a href="/">HOME</a>
+            <a href="/form" class="active">ADMISSIONS FORM</a>
+            <a href="/departments">OUR COURSES</a>
+            <a href="/fees">OUR FEES</a>
+        </nav>
+    </header>
+
+    <main class="cols">
+        <aside id="paymentStatus" class="rows bgcover" style="padding: 5vh; top: 0; position: relative; height: auto;">
+            <div class="cols innerbox" style="overflow: hidden; width: 85%; background-color: white; max-width: 700px; max-height: 550px; border-radius: 5px">
+                <h3 style="background-color: dodgerblue; margin: 0; padding: 1rem; font-size: 2rem; font-weight: 400; text-transform: uppercase; text-align: center">Your application has been submitted</h3>
+                <i class="lg-100" style="margin: 3rem auto; text-align: center; font-size: 5rem; color: green"></i>
+                <div id="resbox" class="cols" style="font-size: 1.4rem; color: black; width: 100%; align-items: center; justify-content: center; padding-left: 2rem; padding-right: 2rem; text-align: center">
+                    We would respond in a few seconds. if you aren't redirected in an hour, please send us an email with your payment reference.
+                </div>
+                <div class="rows responsewrap" style="margin: 3rem 0 1rem; padding: 2rem; justify-content: center; align-items: center">
+                    <!-- <a href="#/api" id="responsebtn1" class="responsebtn strip-btn" style="display: none">DOWNLOAD FORM</a> -->
+                    <a href="https://www.ghschools.online" id="responsebtn" class="responsebtn strip-btn">GO TO HOMEPAGE</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        const misspell = `<ol style="text-align: left">
+                            <li>Ensure that your first name and last name (Surname) on the form are the same as what you entered when making payment.</li>
+                            <li>Ensure that you entered the payment reference as you received it in your email</li>
+                        </ol>
+                        <div class="red"><i>(Kindly go back on your browser to correct your details)</i></div>`;
+        const selector = {
+            c400: {
+                color: 'red',
+                image: 'icofont-close-circled',
+                heading: 'ERROR',
+                btn: 'none'
+            },
+            c300: {
+                color: 'orange',
+                image: 'icofont-exclamation-tringle',
+                heading: 'CAUTION',
+                btn: 'block'
+            },
+            c200: {
+                color: 'dodgerblue',
+                image: 'icofont-check-circled',
+                heading: 'Your application has been submitted',
+                btn: 'block'
+            },
+
+            errors: {
+                "serverfail": "An error occured on our server! Please try again in a few hours. Thank you.",
+                "userexists": misspell,
+                "processexists": "You have previously submitted your details to us and it is currently been processed. Please do exercise patience and await an email from us. Thank you.",
+                "payrefinvalid": "You have inputted an invalid payment reference. Please input a valid payment reference!"
+            },
+
+            success: 'Thank you for applying to GH Schools, your application is being processed and a summary will be sent to your email within the next 24 hours. Contact the admissions office if you have further enquiries.'
+        }
+        document.querySelector("#paymentStatus h3").innerHTML = selector[`c${getQuery()['resp_code']}`].heading;
+        document.querySelector("#paymentStatus #resbox").innerHTML = (getQuery()['resp_code'] === '200')? selector.success : selector.errors[`${getQuery()['resp_text']}`];
+        document.querySelector("#paymentStatus h3").style.backgroundColor = selector[`c${getQuery()['resp_code']}`].color;
+        document.querySelector("#paymentStatus a#responsebtn").style.backgroundColor = selector[`c${getQuery()['resp_code']}`].color;
+        document.querySelector("#paymentStatus i").classList.add(selector[`c${getQuery()['resp_code']}`].image);
+        document.querySelector("#paymentStatus i").style.color = selector[`c${getQuery()['resp_code']}`].color;
+        document.querySelectorAll(".responsebtn").forEach(el => {
+            el.style.display = selector[`c${getQuery()['resp_code']}`].btn;
+        });
+        console.log(getQuery());
+    </script>
+
+    <footer class="cols">
+        <div class="top rows">
+            <a href="/" class="footer-logo"><img src="/footer.png" alt="" class="footer-logo"></a>
+            <div>
+                <big>Info</big>
+                <ul>
+                    <li><a href="/departments">Courses</a></li>
+                    <li><a href="https://ghschools.online/">Visit website</a></li>
+                    <li><a href="/rules_and_regulation">Rules And Regulations</a></li>
+                    <li><a href="https://www.ghmediaschool.edu.gh">GH MEDIA SCHOOL</a></li>
+                    <li><a href="https://www.ghcosmetology.com">GH COSMETOLOGY SCHOOL</a></li>
+                    <li><a href="https://www.ghfashionschool.com">GH FASHION SCHOOL</a></li>
+                </ul>
+            </div>
+            <div class="cols">
+                <big>Contact Us</big>
+                <span>Achimota Accra near Achimota New Transport Terminal and Adjacent the Achimota ICGC</span>
+                <span class="rows" style="align-items: center;">Phone: <a href="tel:+233302424909">+233 30 242 4909</a> (landline)</span>
+                <span class="rows" style="align-items: center;">Alt. 1: <a href="tel:+233204622250">+233 20 462 2250</a></span>
+                <span class="rows" style="align-items: center;">Alt. 2: <a href="tel:+233277622250">+233 27 762 2250</a></span>
+                <span class="rows" style="align-items: center;">Alt. 3: <a href="tel:+233544622250">+233 54 462 2250</a></span>
+
+                <span class="rows" style="align-items: center;">Email: <a href="mailto:admissions@ghschools.online">admissions@ghschools.online</a></span>
+            </div>
+        </div>
+        <div class="bottom cols">
+            <span>GH Schools 2020, all rights reserved</span>
+            <span class="rows" style="align-items: center;">Powered by<a href="https://learnira.org">Learnira</a></span>
+        </div>
+    </footer>
+</body>
+</html>

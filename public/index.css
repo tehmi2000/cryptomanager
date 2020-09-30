@@ -1,0 +1,318 @@
+body{
+    overflow-x: hidden;
+}
+
+main{
+    
+    justify-content: space-around;
+}
+
+hr{
+    border: 1px solid red
+}
+
+.input-style{
+    width: 100%;
+    outline: none;
+    border: none;
+    display: block;
+    margin: 1rem 0 0.5rem;
+    /* border-bottom: 2px solid white; */
+    padding: 1.8rem 2rem;
+    border-radius: 3px;
+    background-color: #cecece;
+}
+
+.input-style+.error-alert{
+    font-size: 1.1rem;
+    text-transform: initial;
+    opacity: 0;
+    color: #d80d0d;
+    margin-bottom: 1rem;
+}
+main > .item-pane{
+    width: 65%;
+    height: 100%;
+    min-height: 430px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 1px solid green; */
+}
+
+main #editor, main #deletor{
+    align-items: center;
+    font-size: 1.2rem;
+    color: #960505;
+    height: auto;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    margin-bottom: 1rem;
+}
+
+form h2{
+    display: block;
+    width: 90%;
+    text-align: left;
+    font-weight: 400;
+    font-size: 2rem;
+    /* border: 1px solid red; */
+}
+
+form .toggle-minimize{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+}
+
+form .toggle-minimize:hover{
+    background-color: #ccc;
+}
+
+form .form-content{
+    padding-bottom: 3rem;
+}
+
+form .form-content *, form .form-content{
+    transition: all 0.3s ease, opacity 0.3s ease-in 0.2s;
+}
+
+form .form-content.hidden *, form .form-content.hidden{
+    transition: all 0.2s ease-in 0.1s, opacity 0.1s ease, height 0.3s ease 0.3s;
+}
+
+form .form-content.hidden{
+    overflow-x: hidden;
+    padding: 0;
+}
+
+form .form-content.hidden *{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+}
+
+main [id^="transactionDeleteButton"]{
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    /* height: 100%; */
+}
+
+main [id^="transactionDeleteButton"]:not([class~="activated"]){
+    color: transparent;
+    background-color: transparent;
+    box-shadow: 0 0 0;
+    transition: color 0.5s ease-in 0.3s, background-color 0.8s ease 0.3s, box-shadow 0.6s ease;
+}
+
+.page-section, .page-section-head{
+    justify-content: space-between;
+    overflow: hidden;
+    width: calc((100%/2) - 2rem);
+    min-width: 280px;
+    max-width: 480px;
+    /* padding: 3rem 4rem; */
+    border-radius: 5px;
+    margin: 1rem;
+    /* color: ; */
+    background-color: #fcfcff;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.page-section:hover, .page-section-head:hover{
+    transform: scale(1.045);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-section .head{
+    width: 100%;
+    padding: 3rem 4rem;
+    background-color: #4444f5;
+    color: white;
+}
+
+.page-section .head .date{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+    margin-right: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.13)
+}
+
+.page-section .content{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem;
+    max-height: 230px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.page-section .content .item{
+    width: 100%;
+    padding: 2rem 3rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.page-section .content .item.null{
+    width: 100%;
+    padding: 2rem 3rem;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-size: 1.3rem;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.page-section .content .item .capital-invested{
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: #999;
+}
+
+.page-section .content .item strong{
+    display: inline-block;
+    /* line-height: 1.5; */
+    /* margin-top: 0.5rem; */
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.page-section .content .item:last-child{
+    border-bottom: none;
+}
+
+.page-section .content .item:not([class~='null']):hover{
+    background-color: #ccc;
+    /* border-bottom: none; */
+}
+
+.page-section .content .item.expense{
+    width: 100%;
+    padding: 2rem 3rem;
+    justify-content: center;
+    align-items: center;
+    color: rgb(231, 15, 15);
+}
+
+.page-section h2, .page-section-head h2{
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.page-section h2{
+    font-size: 2rem !important;
+}
+
+.page-section-head > *{
+    text-align: center;
+}
+
+.page-section-head h2{
+    font-size: 2.5rem;
+}
+
+.page-section .profit-foot{
+    /* justify-content: center; */
+    position: static;
+    background-color: #333;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    font-size: 1.3rem !important;
+}
+
+.page-section .profit-foot h2{
+    text-align: center;
+    font-size: 1.3rem !important;
+}
+
+.options-button{
+    outline: none;
+    width: 100%;
+    position: relative;
+    display: block;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 1.2rem 3.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #d80d0d;
+    font-size: 1.5rem;
+    color: #fff;
+    /* min-width: 100px; */
+    max-width: 400px;
+    margin: auto;
+    margin-top: 1rem;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* GSGGSGSGSGSGGSGGSGSGSGGGSGSGSISSISJSJSJJTJTJJTRJERGSG */
+
+@media only screen and (max-width:800px){
+    .navlinks{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .page-section{
+        width: 85%;
+    }
+
+    .page-section-head{
+        top: 0;
+        position: sticky;
+        padding: 1rem 3rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        border-radius: 0;
+        z-index: +200;
+    }
+
+    .page-section-head h2{
+        font-size: 1.6rem;
+        color: #d80d0d;
+    }
+
+    .page-section h2{
+        font-size: 1.8rem !important;
+    }
+
+    .paystack-form{
+        width: 100%;
+    }
+
+    [class$="bg-cover"] > *{
+        width: 80vw;
+        min-height: 80vh;
+        overflow: auto;
+        padding: 2rem;
+        margin: 0;
+        transform: translate(12%, 12%);
+    }
+
+    .notify-box .body-box{
+        margin: auto;
+        transform: translateY(10%);
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 920px){
+    .notify-box .body-box{
+        transform: translateY(15%);
+    }
+}

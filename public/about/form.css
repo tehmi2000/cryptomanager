@@ -1,0 +1,262 @@
+html{
+    scroll-behavior: unset;
+}
+
+body{
+  background-color: black;
+  overflow-x: hidden;
+}
+
+form h3{
+    background-color: rgb(238, 0, 52);
+}
+
+form fieldset{
+    border: 1px dashed lightgrey;
+    padding: 0 2rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+form fieldset legend{
+    color: rgb(113, 255, 108);
+}
+
+#application-form label[for="preview-image-1"]{
+    margin: 0.5rem 2%;
+    min-width: 9rem;
+    min-height: 9rem;
+}
+
+#application-form label[for="preview-image-1"]{
+    /* For older browsers */
+    width: 200px;
+    height: 200px;
+    /* For newer browsers */
+    width: 15vw;
+    height: 15vw;
+}
+
+main{
+    justify-content: center;
+    /* align-items: center; */
+}
+
+hr{
+    border: 1px solid red
+}
+
+.progress{
+    transform-origin: center;
+    background-color: #999 !important;
+    -webkit-animation: rolling 1.5s linear 0s infinite normal forwards;
+    animation: rolling 1.5s linear 0s infinite normal forwards;
+}
+
+.saving{
+    box-shadow: none !important;
+    outline: none !important;
+    background-color : #999 !important;
+    color: #444 !important;
+}
+
+#application-form{
+    width: 100%;
+    /* max-width: 90rem; */
+    font-size: 1.2rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+#application-form table{
+    overflow: auto;
+}
+
+#application-form > *{
+    padding: 0 2rem;
+}
+
+.form-content{
+    /* border: 1px solid red; */
+    width: 70%;
+}
+
+#application-form .form-line{
+    margin-top: 1rem;
+}
+
+#application-form .form-line > *{
+    margin-right: 1rem; /* For older browsers */
+    margin-right: 4%; /* For newer browsers */
+}
+
+#application-form input:not([type="submit"]), #application-form select{
+    /* width: 100%; */
+    outline: none;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+#application-form select{
+    background-color: black;
+}
+
+#application-form input[type="submit"]{
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color: #d80d0d;
+    color: #fcfcff;
+    padding: 1.5rem 2rem;
+    margin: 2.5rem auto 0.5rem auto;
+    box-shadow: 1px 1px 2px rgba(185, 91, 3, 0.637);
+}
+
+#application-form form > label, #application-form .label{
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery{
+    position: relative;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    justify-content: left;
+    /* border: 1px dashed #777; */
+    padding: 1.5rem 1rem;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-image: linear-gradient(90deg, red, yellow, green);
+}
+
+#application-form h1{
+    text-shadow: 1px 1px 2px black;
+    font-size: 2.5rem;
+}
+
+#application-form .gallery > *{
+    margin: 0 1.5rem;
+    /* height: 15vw; */
+}
+
+#application-form .gallery .status-bar{
+    display: none;
+    color: #f0f0f0;
+    border-radius: 5px;
+    /* border: 1px solid #0e6ba1; */
+    background-color: rgba(54, 177, 248, 0.85);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.30);
+    padding: 1rem;
+    position: absolute;
+    top: 1rem;
+}
+
+#application-form label[for="preview-image-1"]{
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem 2%;
+    color: #b9b9b9;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #eeeeee;
+    justify-content: center;
+}
+
+#application-form label[for="preview-image-1"] div{
+    padding: 0.5rem 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#application-form label[for="preview-image-1"] .img-action{
+    margin: 0 0.5rem;
+    background-color: #ff4500;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+}
+
+#application-form input[type="file"]{
+    display: block;
+    width: 0.1px;
+    height: 0.1px;
+    margin: -1rem auto;
+    opacity: 0;
+}
+
+footer{
+    background-color: rgb(66, 0, 0);
+}
+
+@media only screen and (max-width:800px){
+    main .notice{
+        font-size: 1rem;
+    }
+
+    div.payref{
+        width: 90% !important;
+    }
+
+    .navlinks{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    #application-form{
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #application-form > *{
+        width: 100%;
+    }
+
+    #application-form .form-line{
+        justify-content: space-between;
+        /* border: 1px solid red; */
+    }
+
+    #application-form h1{
+        font-size: 1.8rem;
+    }
+
+    #application-form label[for="preview-image-1"]{
+        width: 46%;
+        margin: 0.6rem auto;
+        /* margin-left: auto; */
+        min-width: 100px;
+        height: 15rem;
+        color: #b9b9b9;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 1rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-color: #eeeeee;
+    }
+
+    #application-form input[type="submit"]{
+        width: auto;
+    }
+
+    #application-form input:not([type="submit"]), #application-form select{
+        border-bottom-width: 1px;
+    }
+}
